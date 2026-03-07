@@ -32,7 +32,7 @@ export const createProjectTool: ToolHandler = {
       content: [
         {
           type: 'text',
-          text: `## 🚀 新项目创建成功：${name}\n\n` +
+          text: `✨ 正在使用 🚀 项目创建 能力\n\n## 🚀 新项目创建成功：${name}\n\n` +
                 `**项目描述：** ${description}\n` +
                 `**技术栈：** ${stack}\n\n` +
                 `### 📁 项目结构\n` +
@@ -97,7 +97,7 @@ export const executeTaskTool: ToolHandler = {
       content: [
         {
           type: 'text',
-          text: `## ⚡ 任务执行：${task}\n\n` +
+          text: `✨ 正在使用 ⚡ 任务执行 能力\n\n## ⚡ 任务执行：${task}\n\n` +
                 `**上下文：** ${context}\n` +
                 `**开发语言：** ${language}\n\n` +
                 `### 📋 实现方案\n` +
@@ -168,7 +168,7 @@ export const debugTool: ToolHandler = {
       content: [
         {
           type: 'text',
-          text: `## 🔍 问题诊断：${problem}\n\n` +
+          text: `✨ 正在使用 🐛 智能调试 能力\n\n## 🔍 问题诊断：${problem}\n\n` +
                 `**运行环境：** ${environment}\n\n` +
                 `### 🐛 问题分析\n` +
                 `#### 可能的原因：\n` +
@@ -238,7 +238,7 @@ export const generateDocsTool: ToolHandler = {
       content: [
         {
           type: 'text',
-          text: `## 📚 ${project} - ${type}\n\n` +
+          text: `✨ 正在使用 📚 文档生成 能力\n\n## 📚 ${project} - ${type}\n\n` +
                 (type === 'README' 
                   ? `# ${project}\n\n` +
                     `## 项目介绍\n\n` +

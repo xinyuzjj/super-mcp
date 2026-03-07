@@ -33,7 +33,7 @@ export const brainstormTool: ToolHandler = {
       content: [
         {
           type: 'text',
-          text: `## 🧠 关于 "${topic}" 的头脑风暴结果\n\n` +
+          text: `✨ 正在使用 🧠 头脑风暴 能力\n\n## 🧠 关于 "${topic}" 的头脑风暴结果\n\n` +
                 `${category ? `**分类：** ${category}\n\n` : ''}` +
                 `### 💡 创意列表：\n` +
                 Array.from({ length: count }, (_, i) => 
@@ -78,7 +78,7 @@ export const writePlanTool: ToolHandler = {
       content: [
         {
           type: 'text',
-          text: `## 📋 "${project}" 项目执行计划\n\n` +
+          text: `✨ 正在使用 📋 计划编写 能力\n\n## 📋 "${project}" 项目执行计划\n\n` +
                 `**类型：** ${type}\n` +
                 `**预计工期：** ${duration}\n\n` +
                 `### 🎯 项目目标\n` +
@@ -143,7 +143,7 @@ export const codeReviewTool: ToolHandler = {
       content: [
         {
           type: 'text',
-          text: `## 🔍 ${language} 代码评审结果\n\n` +
+          text: `✨ 正在使用 🔍 代码评审 能力\n\n## 🔍 ${language} 代码评审结果\n\n` +
                 `${focus ? `**评审重点：** ${focus}\n\n` : ''}` +
                 `### ✅ 优点\n` +
                 `- 代码整体结构清晰，逻辑通顺\n` +

@@ -31,6 +31,17 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
   }
 })
 
+// 工具名称映射，显示友好的中文名称
+const toolDisplayName: Record<string, string> = {
+  'brainstorm': '🧠 头脑风暴',
+  'write_plan': '📋 计划编写',
+  'code_review': '🔍 代码评审',
+  'create_project': '🚀 项目创建',
+  'execute_task': '⚡ 任务执行',
+  'debug_problem': '🐛 智能调试',
+  'generate_documentation': '📚 文档生成',
+}
+
 // 处理工具调用请求
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
   try {
@@ -41,6 +52,10 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       throw new Error(`未知工具: ${toolName}`)
     }
 
+    // 显示正在使用的能力
+    const displayName = toolDisplayName[toolName] || `🔧 ${toolName}`
+    console.error(`\n✨ 正在调用能力：${displayName}`)
+    
     const result = await tool.handler(request.params.arguments)
     return result
 
